@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="ur">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Urdu Poetry Ebook</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Noto Naskh Urdu', 'Arial', sans-serif;
+            background: #f5f0e8;
+            color: #2c1810;
+            line-height: 1.8;
+            padding: 20px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .book-cover {
+            text-align: center;
+            padding: 60px 20px;
+            background: linear-gradient(135deg, #8B4513, #D2691E);
+            color: white;
+            border-radius: 15px;
+            margin-bottom: 40px;
+        }
+        .book-cover h1 {
+            font-size: 2.8em;
+            margin-bottom: 20px;
+            font-family: 'Times New Roman', serif;
+        }
+        .book-cover p {
+            font-size: 1.2em;
+            opacity: 0.9;
+            font-family: Arial, sans-serif;
+            direction: ltr;
+        }
+        .poem-container {
+            background: white;
+            padding: 30px;
+            margin-bottom: 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        .poem-title {
+            font-size: 2em;
+            color: #8B4513;
+            border-bottom: 2px solid #D2691E;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+            text-align: center;
+            font-family: 'Times New Roman', serif;
+        }
+        .poet-name {
+            font-size: 1.3em;
+            color: #A0522D;
+            text-align: center;
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+        .poet-bio {
+            background: #f8f4ef;
+            padding: 15px;
+            border-radius: 8px;
+            margin: 20px 0;
+            font-family: Arial, sans-serif;
+            direction: ltr;
+            text-align: left;
+            font-size: 0.95em;
+            border-right: 4px solid #D2691E;
+        }
+        .poem-summary {
+            background: #e8f0f8;
+            padding: 15px;
+            border-radius: 8px;
+            margin: 20px 0;
+            font-family: Arial, sans-serif;
+            direction: ltr;
+            text-align: left;
+            font-size: 0.95em;
+            border-left: 4px solid #2E86C1;
+        }
+        .verse {
+            padding: 12px 0;
+            border-bottom: 1px dashed #ddd;
+        }
+        .verse:last-child {
+            border-bottom: none;
+        }
+        .urdu-verse {
+            font-size: 1.4em;
+            text-align: right;
+            padding: 8px 0;
+            font-family: 'Noto Naskh Urdu', 'Arial', sans-serif;
+            line-height: 2;
+        }
+        .translation-verse {
+            font-size: 0.95em;
+            text-align: left;
+            padding: 8px 0 8px 20px;
+            color: #444;
+            font-family: Arial, sans-serif;
+            direction: ltr;
+            border-right: 3px solid #D2691E;
+            padding-right: 15px;
+        }
+        .ghazal-tag {
+            display: inline-block;
+            background: #D2691E;
+            color: white;
+            padding: 3px 12px;
+            border-radius: 15px;
+            font-size: 0.7em;
+            font-family: Arial, sans-serif;
+            direction: ltr;
+        }
+        .toc {
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+            margin-bottom: 40px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        .toc h2 {
+            color: #8B4513;
+            border-bottom: 2px solid #D2691E;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+        .toc-item {
+            padding: 8px 0;
+            border-bottom: 1px solid #eee;
+        }
+        .toc-item a {
+            color: #2c1810;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .toc-item a:hover {
+            color: #D2691E;
+        }
+        @media print {
+            body { background: white; padding: 0; }
+            .poem-container { box-shadow: none; border: 1px solid #ddd; }
+            .book-cover { background: #8B4513 !important; }
+        }
+    </style>
+</head>
+<body>
+    <div class="book-cover">
+        <h1>📖 Urdu Poetry Collection</h1>
+        <p>A Collection of Classical and Modern Urdu Poems</p>
+        <p style="margin-top: 20px; font-size: 0.9em;">Translated Verse by Verse</p>
+        <p style="margin-top: 10px; font-size: 0.8em; opacity: 0.7;">Generated: September 02, 2026</p>
+    </div>
+
+    <div class="toc">
+        <h2>📑 Table of Contents</h2>
+
+        <div class="toc-item">
+            <a href="#poem1">1. Dil-e-Nadaan</a>
+            <span style="float: right; direction: ltr;">by Mirza Ghalib</span>
+        </div>
+
+        <div class="toc-item">
+            <a href="#poem2">2. Khudi Ko Kar Buland Itna</a>
+            <span style="float: right; direction: ltr;">by Allama Iqbal</span>
+        </div>
+
+        <div class="toc-item">
+            <a href="#poem3">3. Mujh Se Pehli Si Mohabbat</a>
+            <span style="float: right; direction: ltr;">by Faiz Ahmed Faiz</span>
+        </div>
+    </div>
+
+    <div class="poem-container" id="poem1">
+        <div class="poem-title">Dil-e-Nadaan</div>
+        <div class="poet-name">
+            Mirza Ghalib
+             <span class="ghazal-tag">Ghazal</span>
+        </div>
+
+        <div class="poet-bio">
+            <strong>👤 About the Poet:</strong> Mirza Asadullah Khan Ghalib (1797-1869) was a renowned Urdu and Persian poet from the Mughal Empire. He is considered one of the most influential poets of the Urdu language.
+        </div>
+
+        <div class="poem-summary">
+            <strong>📝 Summary:</strong> This ghazal explores the confusion and pain of love, questioning the nature of the heart's affliction and the possibility of finding a cure.
+        </div>
+
+        <div style="margin-top: 20px;">
+
+            <div class="verse">
+                <div class="urdu-verse">دلِ ناداں تجھے ہوا کیا ہے</div>
+                <div class="translation-verse">→ O naive heart, what has befallen you?</div>
+            </div>
+
+            <div class="verse">
+                <div class="urdu-verse">آخر اس درد کی دوا کیا ہے</div>
+                <div class="translation-verse">→ What is the cure for this pain at last?</div>
+            </div>
+
+            <div class="verse">
+                <div class="urdu-verse">ہم کو اُن سے وفا کی امید ہے</div>
+                <div class="translation-verse">→ I hope for loyalty from them,</div>
+            </div>
+
+            <div class="verse">
+                <div class="urdu-verse">جانے اُن کو تو بے وفا کیا ہے</div>
+                <div class="translation-verse">→ Who knows what disloyalty means to them?</div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="poem-container" id="poem2">
+        <div class="poem-title">Khudi Ko Kar Buland Itna</div>
+        <div class="poet-name">
+            Allama Iqbal
+            
+        </div>
+
+        <div class="poet-bio">
+            <strong>👤 About the Poet:</strong> Sir Muhammad Iqbal (1877-1938) was a philosopher, poet, and politician in British India. He is widely regarded as the spiritual father of Pakistan and one of the most important figures in Urdu literature.
+        </div>
+
+        <div class="poem-summary">
+            <strong>📝 Summary:</strong> This powerful poem encourages self-elevation and spiritual growth, suggesting that when one reaches a high state of consciousness, even divine will responds to human aspiration.
+        </div>
+
+        <div style="margin-top: 20px;">
+
+            <div class="verse">
+                <div class="urdu-verse">خودی کو کر بلند اتنا کہ ہر تقدیر سے پہلے</div>
+                <div class="translation-verse">→ Elevate your selfhood so high, that before every fate,</div>
+            </div>
+
+            <div class="verse">
+                <div class="urdu-verse">خدا بندے سے خود پوچھے بتا تیری رضا کیا ہے</div>
+                <div class="translation-verse">→ God Himself asks His servant: 'Tell me, what is your will?'</div>
+            </div>
+
+            <div class="verse">
+                <div class="urdu-verse">افلاک سے آگے جا کر دیکھا</div>
+                <div class="translation-verse">→ I went beyond the heavens and saw,</div>
+            </div>
+
+            <div class="verse">
+                <div class="urdu-verse">خوابوں کی دنیا میں کھو کر دیکھا</div>
+                <div class="translation-verse">→ I lost myself in the world of dreams and saw.</div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="poem-container" id="poem3">
+        <div class="poem-title">Mujh Se Pehli Si Mohabbat</div>
+        <div class="poet-name">
+            Faiz Ahmed Faiz
+             <span class="ghazal-tag">Ghazal</span>
+        </div>
+
+        <div class="poet-bio">
+            <strong>👤 About the Poet:</strong> Faiz Ahmed Faiz (1911-1984) was a Pakistani poet, writer, and one of the most famous Urdu poets of the 20th century. His poetry is known for its revolutionary themes and romanticism.
+        </div>
+
+        <div class="poem-summary">
+            <strong>📝 Summary:</strong> A poignant reflection on how love and idealism change over time, this poem marks the transition from youthful romance to a more mature and politicized understanding of love.
+        </div>
+
+        <div style="margin-top: 20px;">
+
+            <div class="verse">
+                <div class="urdu-verse">مجھ سے پہلی سی محبت مرے محبوب نہ مانگ</div>
+                <div class="translation-verse">→ Don't ask me for the love I once had, my beloved,</div>
+            </div>
+
+            <div class="verse">
+                <div class="urdu-verse">میں نے سمجھا تھا کہ تو ہے تو درخشاں ہے حیات</div>
+                <div class="translation-verse">→ I thought that if you exist, then life is radiant,</div>
+            </div>
+
+            <div class="verse">
+                <div class="urdu-verse">تیرا غم ہے تو غمِ دہر کا جھگڑا کیا ہے</div>
+                <div class="translation-verse">→ If your sorrow exists, what trouble is the world's sorrow?</div>
+            </div>
+
+            <div class="verse">
+                <div class="urdu-verse">اب وہ نرم گلوں کی باتیں اب وہ شیریں باتیں</div>
+                <div class="translation-verse">→ Now those soft conversations, now those sweet words,</div>
+            </div>
+
+            <div class="verse">
+                <div class="urdu-verse">اب وہ افکار کی لذت اب وہ تغیر کی رات</div>
+                <div class="translation-verse">→ Now the pleasure of thoughts, now the night of change.</div>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+</html>
