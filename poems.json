@@ -1,0 +1,32 @@
+{
+    "author": "Allama Muhammad Iqbal",
+    "collection": "Bang-e-Dara",
+    "language": "Urdu",
+
+    "poems": [
+        {
+            "title": "Poem 1",
+            "urdu_text": "PASTE THE COMPLETE URDU POEM HERE"
+        },
+
+        {
+            "title": "Poem 2",
+            "urdu_text": "PASTE THE COMPLETE URDU POEM HERE"
+        },
+
+        {
+            "title": "Poem 3",
+            "urdu_text": "PASTE THE COMPLETE URDU POEM HERE"
+        },
+
+        {
+            "title": "Poem 4",
+            "urdu_text": "PASTE THE COMPLETE URDU POEM HERE"
+        },
+
+        {
+            "title": "Poem 5",
+            "urdu_text": "PASTE THE COMPLETE URDU POEM HERE"
+        }
+    ]
+}
